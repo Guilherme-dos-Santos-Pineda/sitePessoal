@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilo.css">
+    <script src="./script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <svg onclick="sumirConteudoLista()" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="x" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+        <div class="navigation" id="navigation">
+            <a id="link1" href="#">Home</a><a id="link2" href="#">Sobre Mim</a><a id="link3" href="#">Portifolio</a><a id="link4" href="#">Projetos</a><a id="link5" href="#">Contate-me</a>
+        </div>
+        <a class="icones" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="30" fill="currentColor" id="lista" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+              </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" id="windows" viewBox="0 0 16 16">
+                <path d="M6.555 1.375 0 2.237v5.45h6.555V1.375zM0 13.795l6.555.933V8.313H0v5.482zm7.278-5.4.026 6.378L16 16V8.395H7.278zM16 0 7.33 1.244v6.414H16V0z"/>
+            </svg>
+        </a>
+    </div>
+    <section class="conteudo">
+        <video class="video" autoplay loop muted plays-inline>
+            <source src="./assents/lava.mp4" type="video/mp4">
+        </video>
+
+        <div class="divImagem">
+            <img class="img" src="https://avatars.githubusercontent.com/u/101909863?v=4" alt="myself">
+        </div>
+        <div class="apresentacaoBasica param">
+                <span class="bemVindo param"> Bem vindo(a) eu me chamo</span>
+                <h2 class="nome param">Guilherme S. Pineda</h2>
+                <h4 class="dev param">Desenvolvedor Web</h4>
+            <div class="iconesPequenos">
+                <a class="param" href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi envelope" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                    </svg>
+                    guilhermesantospineda@gmail.com
+                </a>
+                <a class="param" href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi whatsapp" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                    </svg>
+                    +55 11 97122-5580
+                </a>
+                <a class="param" href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi gps" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                </svg>
+                Osasco, São Paulo, Brazil
+                </a>
+                <div class="iconesPequenos2">
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="icn github param" viewBox="0 0 16 16">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                    </a>
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="icn facebook param" viewBox="0 0 16 16">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                        </svg>
+                    </a>
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="icn twitter param" viewBox="0 0 16 16">
+                            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                        </svg>
+                    </a>
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="icn linkedin param" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                        </svg>
+                    </a> 
+                    <!-- para consertar o bug dos icones precisa somente retirar o espaço entre os links do git ao linkedin -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="sobreMim">
+        <div class="divImgSobreMim" data-anima="esquerda">
+            <img class="enfeite" src="https://cursocarreiradev.com/x-profile.svg" alt="">
+            <img class="imgSobreMim" src="./assents/images/profile-pic.png" alt="">
+        </div>
+        <div class="secaoSobreMim" data-anima="direita">
+            <div class="h1SobreMim">
+                <h2>&lt; Um pouco <br><br> sobre <span class="ssbre">Mim</span> /&gt </h2>
+            </div>
+            <p>Tenho 21 anos, moro em Osasco, São Paulo, Brazil.
+                Sempre me interesei muito pela area de tecnologia e decidi focar
+                em desenvolvimento Web, tanto Front-end como Back-end. Não possuo
+                experiencia em empresas grandes mas já realizei inumeros projetos 
+                e decidi colocar alguns aqui, no meu portifolio pessoal, para mostrar 
+                minhas habilidades. Tenho muito potencial para crescer e desenvolver e 
+                só preciso de uma oportunidade para mostrar que sou uma excelente escolha.
+            </p>
+            <ul>
+                <li><span>HTML</span></li>
+                <li><span>CSS</span></li>
+                <li><span>JavaScript</span></li>
+                <li><span>Bootstrap</span></li>
+                <li><span>Node</span></li>
+                <li><span>React</span></li>
+                <li><span>React Native</span></li>
+                <li><span>Jquery</span></li>
+            </ul>
+            <a class="classeLinkDoDownload" href="">
+                <div class="download">Download CV
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="iconeDownload" viewBox="0 0 16 16">
+                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </section>
+
+
+    <section class="conteudoMeuServico">
+        <div class="geralGrid" data-anima="centro">
+            <div class="tituloMeuServico">
+                <h1>Oque eu Faço</h1>
+            </div>
+            <div class="meuServicoGridGeral">
+                <div class="grid g1">
+                    <img src="data:image/png;base64,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" alt="icon">
+                    <div class="textoDaGrid">
+                        <p class="htmlGrid">
+                            Confecção de sites responsivos com design focados na experiência do usuário usando as tecnologias HTML, CSS, Bootstratp, ReactJS etc
+                        </p>
+                     </div>
+                </div>
+                <div class="grid g2">
+                    <img src="https://programadorbr.com/static/media/NodeJS.8e555711.png" alt="icon2">
+                    <div class="textoDaGrid">
+                        <p class="htmlGrid">
+                            Desenvolvimento de API's completas em NodeJS para consumo tanto de páginas web quanto de aplicações mobile. Incluindo a criação e manipulação de bancos de dados relacionais e não-relacionais
+                        </p>
+                    </div>
+                </div>
+                <div class="grid g3">
+                    <img src="https://programadorbr.com/static/media/React.56d08fb9.png" alt="icon3">
+                    <div class="textoDaGrid">
+                        <p class="htmlGrid">
+                            Desenvolvimento e criação de aplicativos web com o React e Redux. Desde aplicações simples às mais complexas com usos de Rotas protegidas
+                        </p>
+                     </div>
+                </div>
+                <div class="grid g1">
+                    <img src="https://programadorbr.com/static/media/JQuery.cb699ea6.png" alt="icon">
+                    <div class="textoDaGrid">
+                        <p class="htmlGrid">
+                            Utilização do JQuery para alguns projetos e para manutenções em projetos que o utilizam quanto para confecção mais agil e com menos linhas de codigos 
+                        </p>
+                     </div>
+                </div>
+                <div class="grid g2">
+                    <img src="https://programadorbr.com/static/media/Firebase.d5c235e0.png" alt="icon2">
+                    <div class="textoDaGrid">
+                        <p class="htmlGrid">
+                            Soluções completas de back end para aplicações mobile e web. Utilização de armazenamento de dados com o Firestore e de arquivos com o Firebase Storage.
+                        </p>
+                    </div>
+                </div>
+                <div class="grid g3">
+                    <img src="data:image/png;base64,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" alt="icon3">
+                    <div class="textoDaGrid">
+                        <p class="htmlGrid">
+                            Construção de bancos de dados com MongoDB para mais controle sobre a aplicação e criar sistemas com excelente performance.
+                        </p>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+       
+    <section class="projetosFeitos">
+        <h1 class="projetosFeitosTitle"> Projetos Feitos </h1>
+        <div class="uniGerall">
+            <div class="todosProjetos">
+                <div class="pro projeto1">
+                    <div class="clima projetos"></div>
+                    <a class="" href="">
+                        <h2>Página de Captura</h2>
+                    </a>
+                    <ul>
+                        <li><span>HTML</span></li>
+                        <li><span>CSS</span></li>
+                    </ul>
+                    <p>Descrição detalhada do projeto<br> etec etc etc etc <br> etc etc</p>
+                    <a class="tituloLink" href="">Ver Repositório</a>
+                </div>
+                <div class="pro projeto2" >
+                    <div class="clima projetos"></div>
+                    <a href="https://guilherme-dos-santos-pineda.github.io/Clima-J-/">
+                        <h2>Acesse o Projeto</h2>
+                    </a>
+                    <ul>
+                        <li><span>HTML</span></li>
+                        <li><span>CSS</span></li>
+                        <li><span>JavaScript</span></li>
+                    </ul>
+                    <p>Aplicativo WEB de previsão do tempo. Além de capturar os dados climaticos ele tambem puxa um banco e imagens e tenta passar ao fundo alguma imagem parecida com a cidade que digitou</p>
+                    <a class="tituloLink" href="https://github.com/Guilherme-dos-Santos-Pineda/Clima-J-">Ver Repositório</a>
+                </div>
+                <div class="pro projeto3">
+                    <div class="todo projetos"></div>
+                    <a href="">
+                        <h2>link que leva para o git</h2>
+                    </a>
+                    <ul>
+                        <li><span>tecnologia</span></li>
+                        <li><span>tecnologia</span></li>
+                        <li><span>tecnologia</span></li>
+                    </ul>
+                    <p>Descrição detalhada do projeto<br> etec etc etc etc <br> etc etc</p>
+                    <a class="tituloLink" href="">Ver Repositório</a>
+                </div>
+                <div class="pro projeto4">
+                    <div class="clima projetos"></div>
+                    <a href="">
+                        <h2>link que leva para o git</h2>
+                    </a>
+                    <ul>
+                        <li><span>tecnologia</span></li>
+                        <li><span>tecnologia</span></li>
+                        <li><span>tecnologia</span></li>
+                    </ul>
+                    <p>Descrição detalhada do projeto<br> etec etc etc etc <br> etc etc</p>
+                    <a class="tituloLink" href="">Ver Repositório</a>
+                </div>
+                <div class="pro projeto5">
+                    <div class="clima projetos"></div>
+                    <a href="">
+                        <h2>link que leva para o git</h2>
+                    </a>
+                    <ul>
+                        <li><span>HTML</span></li>
+                        <li><span>CSS</span></li>
+                        <li><span>JavaScript</span></li>
+                    </ul>
+                    <p>Projeto simples de um jogo da memoria, funcional e bem estilizado, feito para treinar minha logica 
+                        de programação. Foi utilizados tecnicas de programação funcional além do trio basico de HTML, CSS e JavaScript puro. <br>Sinta-se a vontade para baixar no meu repositório e jogar no seu 
+                    </p>
+                    <a class="tituloLink" href="">Ver Repositório</a>
+                </div>
+                <div class="pro projeto6">
+                    <div class="clima projetos"></div>
+                    <a href="">
+                        <h2>Página de Captura</h2>
+                    </a>
+                    <ul>
+                        <li><span>HTML</span></li>
+                        <li><span>CSS</span></li>
+                        <li><span>Mailchimp</span></li>
+                    </ul>
+                    <p>Meu Primeiro projeto funcional, fiz para minha mãe, que é dona de uma loja. Se trata de uma página de captura feita com HTML e CSS integrado ao Mailchimp, 
+                        um exemplo de uso seria o dono de uma loja cadastra os dados do cliente (email, nome, telefone) e este passa a 
+                        receber ofertas personalizadas, no email, que podem ser controladas pelo Mailchimp, aumentando assim a publicidade de uma loja.
+                    </p>
+                    <a class="tituloLink" href="">Ver Repositório</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mySkills">
+        <div class="geral">
+            <div class="tituloHT">
+                <h1>HABILIDADES TÉCNICAS</h1>
+            </div>
+            <div class="texto simples-1">
+                <p>HTML</p>
+                <div class="barra barra-vazia">
+                    <div class="barra um barra-cheia"></div>
+                </div>
+            </div>
+            <div class="texto simples-2">
+                <p>CSS</p>
+                <div class="barra barra-vazia">
+                    <div class="barra dois barra-cheia"></div>
+                </div>
+            </div>
+            <div class="texto simples-3">
+                <p>JavaScript</p>
+                <div class="barra barra-vazia">
+                    <div class="barra tres barra-cheia"></div>
+                </div>
+            </div>
+            <div class="texto simples-4">
+                <p>NodeJS</p>
+                <div class="barra barra-vazia">
+                    <div class="barra quatro barra-cheia"></div>
+                </div>
+            </div>
+            <div class="texto simples-5">
+                <p>ReactJS</p>
+                <div class="barra barra-vazia">
+                    <div class="barra cinco barra-cheia"></div>
+                </div>
+            </div>
+            <div class="texto simples-6">
+                <p>Bootstrap</p>
+                <div class="barra barra-vazia">
+                    <div class="barra seis barra-cheia"></div>
+                </div>
+            </div>
+            <div  class="texto simples-7">
+                <p>Jquery</p>
+                <div class="barra barra-vazia">
+                    <div class="barra sete barra-cheia"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="formacao">
+        <div class="educacaoEExperiencia">
+            <div class="educacao">
+                <h2 class="ano-ano">Formação Academica</h2>
+                <div class="for uni9">
+                    <h3>Ciência da Computação</h3>
+                    <p class="cor" >Universidade Nove de Julho</p>
+                    <p class="ano" >2021-2024</p>
+                </div>
+                <div class="for programadorbr">
+                    <h3>Curso Desenvolvimento Web</h3>
+                    <p class="cor" >Programador Br</p>
+                    <p class="ano" >2021-2021</p>
+                </div>
+                <div class="for dankicode">
+                    <h3>Curso Desenvolvimento Web Full-Stack</h3>
+                    <p class="cor" >Danki Code</p>
+                    <p class="ano" >2020-2021</p>
+                </div>
+            </div>
+            <div class="Experiencias">
+                <h2 class="ano-ano">Experiência Profissional</h2>
+                <div class="for FreeLancer">
+                    <h3>Densenvolvedor Web</h3>
+                    <p class="cor" >Free Lancer</p>
+                    <p class="ano" >2021-ATUAL</p>
+                    <p class="cor">Confecção de sites responsivos estáticos utilizando HTML, CSS e Bootstrap</p>
+                    <p class="cor">Produção de sites interativos em javascript utilizando React e NodeJS</p>
+                    <p class="cor">Produção de aplicativos nativos Android e IOS utilizando React Native e NodeJS</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="contatic"><h1>Contato</h1></div>
+    <section class="contate-me">
+        <div class="geralGeral">
+            <div class="if redes-sociais">
+                <div class="icone--">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
+                        <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                        <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
+                    </svg>
+                </div>
+            <div class="junta2">
+                <div class="icones-gerais">
+                    <div class="ti ti-ti">
+                        <h1>Redes Sociais</h1>
+                    </div>
+                    <div class="varios">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi tri bi-facebook" viewBox="0 0 16 16">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi tri bi-instagram" viewBox="0 0 16 16">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi tri bi-github" viewBox="0 0 16 16">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi tri bi-linkedin" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="if imagem-email">
+                <div class="icone--">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                    </svg>
+                </div>
+                <div class="junta2">
+                    <div class="icones-gerais">
+                        <div class="ti ti-em">
+                            <h1>E-mail</h1>
+                        </div>
+                        <div class="varios">
+                            <div class="simples-email">
+                                <a href="">guilhermesantospineda@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="if imagem-telefone">
+                <div class="icone--">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                    </svg>
+                </div>
+                <div class="junta2">
+                    <div class="icones-gerais">
+                        <div class="ti ti-tel">
+                            <h1>Telefone</h1>
+                        </div>
+                        <div class="varios">
+                            <div>
+                                <a href="">+ 55 11 97122-5580</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form id="formulario" action="www.exampleee." class="formulario" data-toggle="validator" novalidate="true">
+            <div class="form-contat">
+                <div class="qua div-nome">
+                    <input name="nome" class="cont contato-nome" id="nome" type="text" placeholder="Nome" required>
+                </div>
+                <div class="qua div-telefone">
+                    <input name="Telefone" class="cont contato-telefone" id="telefone" type="tel" placeholder="Telefone" required>
+                </div>
+                <div class="qua div-email">
+                    <input name="email" class="cont contato-email" id="email" type="email" placeholder="Email" required>
+                </div>
+                <div class="qua div-textarea">
+                    <input name="mensagem" rown="6" class="cont contato-texto" id="mensagem" type="text" placeholder="Deixe sua mensagem" required>
+                </div>
+                <div class="divBotaoEnviar">
+                    <button type="submit" class="botao" id="botao">Enviar</button>
+                </div>
+            </div>
+        </form>
+    </section>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+</body>
+<script>
+
+// var navigation = document.getElementById("navigation");
+// var esconder = false;
+// function mudarIcone(){
+//     let windows = document.getElementById("windows");
+//     let lista = document.getElementById("lista");
+
+//     windows.style = "display:none";
+//     lista.style = "display:flex";
+// colocar esse evento no icone do windows para quando mudar a tela
+
+// function arrumarFechamento(){
+
+//     esconder = !esconder;
+//     if(esconder)
+//     {
+//         navigation.style.marginLeft = '-10px';
+//         navigation.style.animationName = 'showSidebar';
+//     }
+//     else{
+//         navigation.style.marginLeft = '-100vw';
+//         navigation.style.animation = '';
+//     }
+// }
+
+// function moverIconeDaLista(){
+//     let iconelista = document.getElementById("lista");
+//     iconelista.style = "display: none";
+
+//     let navigation = document.getElementById("navigation");
+//     navigation.style = "display: flex; padding: 15px";
+
+//         let conteudoLista1 = document.getElementById("link1");
+//         conteudoLista1.style = "display:none";
+
+//         let conteudoLista2 = document.getElementById("link2");
+//         conteudoLista2.style = "display:none";
+
+//         let conteudoLista3 = document.getElementById("link3");
+//         conteudoLista3.style = "display:none";
+
+//         let conteudoLista4 = document.getElementById("link4");
+//         conteudoLista4.style = "display:none";
+
+//         let conteudoLista5 = document.getElementById("link5");
+//         conteudoLista5.style = "display:none";
+
+//     let espaco = document.body.innerHTML = document.body.innerHTML+'<div class="teste" id="teste"><a id="1" href="#">Home</a><a id="2" href="#">Sobre Mim</a><a id="3" href="#">Portifolio</a><a id="4" href="#">Projetos</a><a id="5" href="#">Contate-me</a></div>';
+
+//     let x = document.getElementsByClassName("x");
+//     x[0].style = "display: flex";
+
+//     window.addEventListener("resize", function(event){
+//         if(window.innerWidth < 415 && moverIconeDaLista)
+//         {
+//             console.log("tchau")
+//         let iconelista = document.getElementById("lista");
+//         iconelista.style = "display: flex";
+
+//         let navigation = document.getElementById("navigation");
+//         navigation.style = "display: flex";
+
+//         let conteudoLista1 = document.getElementById("link1");
+//         conteudoLista1.style = "display:none";
+
+//         let conteudoLista2 = document.getElementById("link2");
+//         conteudoLista2.style = "display:none";
+
+//         let conteudoLista3 = document.getElementById("link3");
+//         conteudoLista3.style = "display:none";
+
+//         let conteudoLista4 = document.getElementById("link4");
+//         conteudoLista4.style = "display:none";
+
+//         let conteudoLista5 = document.getElementById("link5");
+//         conteudoLista5.style = "display:none";
+//         }
+//     })
+    
+
+// };
+
+// function sumirConteudoLista(){
+
+//     let iconelista = document.getElementById("lista");
+//     iconelista.style = "display: flex";
+
+//     let x = document.getElementsByClassName("x");
+//     x[0].style = "display: none"
+
+//        let p = document.getElementById("teste");
+//        p.remove(teste);
+
+    
+//     window.addEventListener("resize", function(event){
+//         if(window.innerWidth > 415 && moverIconeDaLista)
+//         {
+//             console.log("oi")
+//             let iconelista = document.getElementById("lista");
+//     iconelista.style = "display: none";
+
+//             let navigation = document.getElementById("navigation");
+//     navigation.style = "display: flex";
+
+//         let conteudoLista1 = document.getElementById("link1");
+//         conteudoLista1.style = "display:flex";
+
+//         let conteudoLista2 = document.getElementById("link2");
+//         conteudoLista2.style = "display:flex";
+
+//         let conteudoLista3 = document.getElementById("link3");
+//         conteudoLista3.style = "display:flex";
+
+//         let conteudoLista4 = document.getElementById("link4");
+//         conteudoLista4.style = "display:flex";
+
+//         let conteudoLista5 = document.getElementById("link5");
+//         conteudoLista5.style = "display:flex";
+//         }
+//     })
+
+
+// };
+
+// começo do animador da pagina
+
+const elementos = document.querySelectorAll('[data-anima]');
+const animacaoClasse = 'animacao';
+
+function animaScroll(){
+    const topoPaginaNaJanela = window.pageYOffset+((window.innerHeight*3)/4);
+    elementos.forEach(function(elemento){
+        if(topoPaginaNaJanela > elemento.offsetTop){
+            elemento.classList.add(animacaoClasse);
+        }
+
+    });
+}
+
+if(elementos.length){
+    window.addEventListener("scroll",function(){
+        animaScroll();
+    })
+}
+
+//Fim do animador da pagina
+
+// Começo do Contator para passar o slide
+// let count = 1;
+// document.getElementById("radio1").checked = true;
+
+// setInterval(function(){
+//     nextImage();
+// }, 15000)
+
+// function nextImage(){
+//     count++;
+//     if(count>4){
+//         count = 1;
+//     }
+//     document.getElementById("radio"+count).checked = true;
+// }
+
+</script>
+</html>
