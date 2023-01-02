@@ -13,7 +13,7 @@
         <svg onclick="sumirConteudoLista()" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="x" viewBox="0 0 16 16">
             <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
           </svg>
-        <div class="navigation" id="navigation">
+        <div class="navigation" id="navigation" >
             <a id="link1" href="#">Home</a><a id="link2" href="#">Sobre Mim</a><a id="link3" href="#">Portifolio</a><a id="link4" href="#">Projetos</a><a id="link5" href="#">Contate-me</a>
         </div>
         <a class="icones" href="#">
@@ -21,9 +21,10 @@
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
               </svg>
 
-            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" id="windows" viewBox="0 0 16 16">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" id="windows" viewBox="0 0 16 16">
                 <path d="M6.555 1.375 0 2.237v5.45h6.555V1.375zM0 13.795l6.555.933V8.313H0v5.482zm7.278-5.4.026 6.378L16 16V8.395H7.278zM16 0 7.33 1.244v6.414H16V0z"/>
-            </svg>
+            </svg> -->
+            <img id="windows" src="./assents/images/G-logo.png" alt="logo">
         </a>
     </div>
     <section class="conteudo">
@@ -111,7 +112,7 @@
                 <li><span>React Native</span></li>
                 <li><span>Jquery</span></li>
             </ul>
-            <a class="classeLinkDoDownload" href="">
+            <a class="classeLinkDoDownload" href="./assents/curriculo/curriculo.pdf" download>
                 <div class="download">Download CV
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="iconeDownload" viewBox="0 0 16 16">
                         <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
@@ -426,7 +427,7 @@
                 </div>
             </div>
         </div>
-        <form id="formulario" action="www.exampleee." class="formulario" data-toggle="validator" novalidate="true">
+        <form id="formulario" method="get" action="./script.js" class="formulario" data-toggle="validator" novalidate="true">
             <div class="form-contat">
                 <div class="qua div-nome">
                     <input name="nome" class="cont contato-nome" id="nome" type="text" placeholder="Nome" required>
