@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guilherme Pineda - Portfólio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @layer base {
+            :root {
+                --background: 220 13% 9%;
+                --foreground: 210 40% 98%;
+
+                --card: 220 13% 9%;
+                --card-foreground: 210 40% 98%;
+
+                --popover: 220 13% 9%;
+                --popover-foreground: 210 40% 98%;
+
+                --primary: 217 91% 60%;
+                --primary-foreground: 220 13% 9%;
+
+                --secondary: 220 13% 12%;
+                --secondary-foreground: 210 40% 98%;
+
+                --muted: 220 13% 12%;
+                --muted-foreground: 215 20.2% 65.1%;
+
+                --accent: 217 91% 60%;
+                --accent-foreground: 220 13% 9%;
+
+                --destructive: 0 84.2% 60.2%;
+                --destructive-foreground: 210 40% 98%;
+
+                --border: 220 13% 16%;
+                --input: 220 13% 16%;
+                --ring: 217 91% 60%;
+
+                --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(236 72% 79%));
+                --gradient-secondary: linear-gradient(135deg, hsl(220 13% 12%), hsl(220 13% 16%));
+                --shadow-glow: 0 0 40px hsl(217 91% 60% / 0.3);
+                --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+                --radius: 0.5rem;
+
+                --sidebar-background: 0 0% 98%;
+
+                --sidebar-foreground: 240 5.3% 26.1%;
+
+                --sidebar-primary: 240 5.9% 10%;
+
+                --sidebar-primary-foreground: 0 0% 98%;
+
+                --sidebar-accent: 240 4.8% 95.9%;
+
+                --sidebar-accent-foreground: 240 5.9% 10%;
+
+                --sidebar-border: 220 13% 91%;
+
+                --sidebar-ring: 217.2 91.2% 59.8%;
+            }
+
+            .dark {
+                --background: 222.2 84% 4.9%;
+                --foreground: 210 40% 98%;
+
+                --card: 222.2 84% 4.9%;
+                --card-foreground: 210 40% 98%;
+
+                --popover: 222.2 84% 4.9%;
+                --popover-foreground: 210 40% 98%;
+
+                --primary: 210 40% 98%;
+                --primary-foreground: 222.2 47.4% 11.2%;
+
+                --secondary: 217.2 32.6% 17.5%;
+                --secondary-foreground: 210 40% 98%;
+
+                --muted: 217.2 32.6% 17.5%;
+                --muted-foreground: 215 20.2% 65.1%;
+
+                --accent: 217.2 32.6% 17.5%;
+                --accent-foreground: 210 40% 98%;
+
+                --destructive: 0 62.8% 30.6%;
+                --destructive-foreground: 210 40% 98%;
+
+                --border: 217.2 32.6% 17.5%;
+                --input: 217.2 32.6% 17.5%;
+                --ring: 212.7 26.8% 83.9%;
+                --sidebar-background: 240 5.9% 10%;
+                --sidebar-foreground: 240 4.8% 95.9%;
+                --sidebar-primary: 224.3 76.3% 48%;
+                --sidebar-primary-foreground: 0 0% 100%;
+                --sidebar-accent: 240 3.7% 15.9%;
+                --sidebar-accent-foreground: 240 4.8% 95.9%;
+                --sidebar-border: 240 3.7% 15.9%;
+                --sidebar-ring: 217.2 91.2% 59.8%;
+            }
+        }
+
+        @layer base {
+            * {
+                border-color: hsl(var(--border));
+            }
+
+            body {
+                background-color: hsl(var(--background));
+                color: hsl(var(--foreground));
+            }
+
+            .bg-gradient-primary {
+                background-image: var(--gradient-primary);
+            }
+
+            .bg-gradient-secondary {
+                background-image: var(--gradient-secondary);
+            }
+
+            .shadow-glow {
+                box-shadow: var(--shadow-glow);
+            }
+
+            .transition-smooth {
+                transition: var(--transition-smooth);
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-background text-foreground">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+                    Guilherme Pineda
+                </h1>
+                <div class="hidden md:flex space-x-6">
+                    <button onclick="scrollToSection('hero')" class="text-sm font-medium transition-colors hover:text-primary text-primary">
+                        Hero
+                    </button>
+                    <button onclick="scrollToSection('about')" class="text-sm font-medium transition-colors hover:text-primary text-muted-foreground">
+                        About
+                    </button>
+                    <button onclick="scrollToSection('education')" class="text-sm font-medium transition-colors hover:text-primary text-muted-foreground">
+                        Education
+                    </button>
+                    <button onclick="scrollToSection('experience')" class="text-sm font-medium transition-colors hover:text-primary text-muted-foreground">
+                        Experience
+                    </button>
+                    <button onclick="scrollToSection('skills')" class="text-sm font-medium transition-colors hover:text-primary text-muted-foreground">
+                        Skills
+                    </button>
+                    <button onclick="scrollToSection('contact')" class="text-sm font-medium transition-colors hover:text-primary text-muted-foreground">
+                        Contact
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-secondary opacity-50"></div>
+        <div class="container mx-auto px-6 py-20 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="flex-1 text-center lg:text-left">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                        Guilherme dos Santos
+                        <span class="block bg-gradient-primary bg-clip-text text-transparent">
+                            Pineda
+                        </span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-muted-foreground mb-8">
+                        Desenvolvedor Full Stack & Formado em Ciência da Computação
+                    </p>
+                    <p class="text-lg text-muted-foreground mb-8 max-w-2xl">
+                        Desenvolvedor movido pela paixão de transformar ideias em soluções funcionais e criativas. Neste espaço, compartilho projetos, aprendizados e experiências que marcaram minha jornada na tecnologia.
+                        <br><br>
+                        Obrigado por visitar meu portfólio — espero que ele te inspire tanto quanto me inspira construí-lo.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <button onclick="scrollToSection('contact')" class="bg-gradient-primary hover:shadow-glow transition-all duration-300 px-6 py-3 rounded-md text-white font-medium">
+                            Entre em Contato
+                        </button>
+                        <button onclick="scrollToSection('experience')" class="px-6 py-3 rounded-md border border-border font-medium">
+                            Ver Experiência
+                        </button>
+                    </div>
+                </div>
+                <div class="flex-shrink-0">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-primary rounded-full blur-3xl opacity-30 animate-pulse"></div>
+                        <img
+                            src="HeroProfile.jpeg"
+                            alt="Guilherme Pineda"
+                            class="relative z-10 w-80 h-80 rounded-full object-cover border-4 border-primary/20 shadow-glow"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Sobre Mim</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg text-muted-foreground mb-6">
+                        Sou desenvolvedor de software, formando em Ciência da Computação e cursando três pós-graduações 
+                        com experiência sólida em desenvolvimento full-stack e liderança de equipes.
+                    </p>
+                    <p class="text-lg text-muted-foreground mb-6">
+                        Atualmente trabalho como Desenvolvedor na Copart, onde implemento
+                        melhorias em sistemas legados e desenvolvo novas funcionalidades usando
+                        tecnologias modernas.
+                        Tenho conhecimento em tecnologias como TypeScript, Go, React, Docker, Jenkins, .NET, Java e outras ferramentas de alto desempenho.
+                        <br><br>
+                        Sou entusiasta da colaboração e acredito que compartilhar conhecimento é uma das formas mais poderosas de evoluir. Se quiser trocar experiências ou colaborar em algum projeto, será um prazer conversar.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="calendar" class="w-5 h-5 text-primary"></i>
+                            <span>24 anos</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-primary"></i>
+                            <span>Osasco, SP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 bg-gradient-secondary border-primary/20 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4">Destaques Profissionais</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                            <div>
+                                <strong class="text-primary">Customer Obsession:</strong> Desenvolvimento de soluções mobile e web que impactaram positivamente a experiência de mais de 50.000 usuários, com feedback médio de 4.8/5 estrelas.
+                            </div>
+                        </li>
+                        <!-- <li class="flex items-start gap-3">
+                            <div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                            <div>
+                                <strong class="text-primary">Ownership:</strong> Liderança técnica de equipes de até 5 desenvolvedores, garantindo entregas de alta qualidade dentro do prazo em 95% dos projetos.
+                            </div>
+                        </li> -->
+                        <li class="flex items-start gap-3">
+                            <div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                            <div>
+                                <strong class="text-primary">Invent & Simplify:</strong> Implementação de arquitetura modular que reduziu o tempo de desenvolvimento de novas features em 40% e custos de manutenção em 35%.
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                            <div>
+                                <strong class="text-primary">Are Right, A Lot:</strong> Tomada de decisões técnicas que resultaram em aumento de 30% na performance de aplicações críticas e redução de 25% no consumo de recursos.
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                            <div>
+                                <strong class="text-primary">Learn & Be Curious:</strong> Implementação bem-sucedida de soluções serverless que reduziram custos operacionais em 60%.
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                            <div>
+                                <strong class="text-primary">Insist on High Standards:</strong> Estabelecimento de processos de code review que reduziram bugs em produção e aumentaram a satisfação do cliente.
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                            <div>
+                                <strong class="text-primary">Deliver Results:</strong> Entrega consistente de projetos complexos com 98% de aderência aos prazos.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-secondary/20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Educação</h2>
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div class="p-6 bg-gradient-secondary border-primary/20 hover:shadow-glow transition-all duration-300 rounded-lg">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-primary/20 p-3 rounded-lg">
+                            <i data-lucide="graduation-cap" class="w-6 h-6 text-primary"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold mb-2">
+                                Bacharelado em Ciência da Computação
+                            </h3>
+                            <p class="text-primary mb-2">Universidade Nove de Julho</p>
+                            <p class="text-muted-foreground">Formatura: Dezembro 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 bg-gradient-secondary border-primary/20 hover:shadow-glow transition-all duration-300 rounded-lg">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-primary/20 p-3 rounded-lg">
+                            <i data-lucide="graduation-cap" class="w-6 h-6 text-primary"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold mb-2">
+                                Curso de Inglês
+                            </h3>
+                            <p class="text-primary mb-2">SENAI</p>
+                            <p class="text-muted-foreground">Concluído: Dezembro 2020</p>
+                            <p class="text-muted-foreground mt-2">Nível: A2 - B1 </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 bg-gradient-secondary border-primary/20 hover:shadow-glow transition-all duration-300 rounded-lg">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-primary/20 p-3 rounded-lg">
+                            <i data-lucide="graduation-cap" class="w-6 h-6 text-primary"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold mb-2">
+                                Três Pós-graduações (Em Andamento)
+                            </h3>
+                            <p class="text-primary mb-2">Conclusão Esperada: Dezembro 2025</p>
+                            <div class="space-y-1 text-muted-foreground">
+                                <p>• Engenharia de Software</p>
+                                <p>• Arquitetura e Infraestrutura de TI</p>
+                                <p>• Gestão de TI</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Experiência Profissional</h2>
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div class="p-6 bg-gradient-secondary border-primary/20 hover:shadow-glow transition-all duration-300 rounded-lg">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-primary/20 p-3 rounded-lg">
+                            <i data-lucide="briefcase" class="w-6 h-6 text-primary"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold mb-2">Desenvolvedor</h3>
+                            <p class="text-primary mb-2">Copart</p>
+                            <p class="text-muted-foreground mb-4">Janeiro 2024 - Presente</p>
+                            <ul class="space-y-2 text-muted-foreground">
+                                <li>• Implementação de melhorias em sistemas legados e correção de bugs em ambiente de produção</li>
+                                <li>• Práticas de desenvolvimento ágil, gerenciamento Jira e rastreamento de issues</li>
+                                <li>• Desenvolvimento de APIs, refatoração de código e migração de funcionalidades</li>
+                                <li>• Deploy de aplicações e colaboração com equipe DevOps</li>
+                            </ul>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-full text-sm bg-secondary text-foreground">C#</span>
+                                <span class="px-3 py-1 rounded-full text-sm bg-secondary text-foreground">JavaScript</span>
+                                <span class="px-3 py-1 rounded-full text-sm bg-secondary text-foreground">TypeScript</span>
+                                <span class="px-3 py-1 rounded-full text-sm bg-secondary text-foreground">LitFramework</span>
+                                <span class="px-3 py-1 rounded-full text-sm bg-secondary text-foreground">Entity Framework</span>
+                                <span class="px-3 py-1 rounded-full text-sm bg-secondary text-foreground">SQL Server</span>
+                                <span class="px-3 py-1 rounded-full text-sm bg-secondary text-foreground">Solr</span>
+                                <span class="px-3 py-1 rounded-full text-sm bg-secondary text-foreground">React.js</span>
+                                <span class="px-3 py-1 rounded-full text-sm bg-secondary text-foreground">Git</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 bg-gradient-secondary border-primary/20 hover:shadow-glow transition-all duration-300 rounded-lg">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-primary/20 p-3 rounded-lg">
+                            <i data-lucide="briefcase" class="w-6 h-6 text-primary"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold mb-2">Estagiário de Engenharia de Software</h3>
+                            <p class="text-primary mb-2">Evo Systems</p>
+                            <p class="text-muted-foreground mb-4">Agosto 2023 - Janeiro 2024</p>
+                            <ul class="space-y-2 text-muted-foreground">
+                                <li>• Desenvolvimento de software e implementação de melhores práticas de engenharia</li>
+                                <li>• Liderança de pequena equipe de desenvolvimento com metodologias ágeis</li>
+                                <li>• Condução de reuniões com clientes para alinhar expectativas de entrega</li>
+                                <li>• Desenvolvimento full-stack com tecnologias modernas</li>
+                            </ul>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-full text-sm bg-secondary text-foreground">Angular 2</span>
+                                <span class="px-3 py-1 rounded-full text-sm bg-secondary text-foreground">C#</span>
+                                <span class="px-3 py-1 rounded-full text-sm bg-secondary text-foreground">MySQL</span>
+                                <span class="px-3 py-1 rounded-full text-sm bg-secondary text-foreground">Git</span>
+                                <span class="px-3 py-1 rounded-full text-sm bg-secondary text-foreground">UML</span>
+                                <span class="px-3 py-1 rounded-full text-sm bg-secondary text-foreground">BPMN</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 bg-gradient-secondary border-primary/20 hover:shadow-glow transition-all duration-300 rounded-lg">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-primary/20 p-3 rounded-lg">
+                            <i data-lucide="briefcase" class="w-6 h-6 text-primary"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold mb-2">Desenvolvedor Freelancer</h3>
+                            <p class="text-primary mb-2">Trabalhos Autônomos</p>
+                            <p class="text-muted-foreground mb-4">Dezembro 2020 - Dezembro 2022</p>
+                            <ul class="space-y-2 text-muted-foreground">
+                                <li>• Desenvolvimento de aplicativos móveis com Flutter e React Native</li>
+                                <li>• Criação de APIs RESTful com Node.js e PHP</li>
+                                <li>• Desenvolvimento de sistemas web completos</li>
+                                <li>• Integração com bancos de dados e serviços de terceiros</li>
+                                <li>• Manutenção e atualização de sistemas legados</li>
+                            </ul>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-full text-sm bg-secondary text-foreground">Flutter</span>
+                                <span class="px-3 py-1 rounded-full text-sm bg-secondary text-foreground">React Native</span>
+                                <span class="px-3 py-1 rounded-full text-sm bg-secondary text-foreground">Node.js</span>
+                                <span class="px-3 py-1 rounded-full text-sm bg-secondary text-foreground">PHP</span>
+                                <span class="px-3 py-1 rounded-full text-sm bg-secondary text-foreground">JavaScript</span>
+                                <span class="px-3 py-1 rounded-full text-sm bg-secondary text-foreground">MySQL</span>
+                                <span class="px-3 py-1 rounded-full text-sm bg-secondary text-foreground">Firebase</span>
+                                <span class="px-3 py-1 rounded-full text-sm bg-secondary text-foreground">Git</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-secondary/20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Tecnologias & Habilidades</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="p-6 bg-gradient-secondary border-primary/20 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">Linguagens & Frameworks</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border-primary/30">C#</span>
+                            <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border-primary/30">JavaScript</span>
+                            <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border-primary/30">TypeScript</span>
+                            <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border-primary/30">React.js</span>
+                            <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border-primary/30">Angular</span>
+                            <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border-primary/30">Node.js</span>
+                            <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border-primary/30">PHP</span>
+                            <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border-primary/30">Flutter</span>
+                            <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border-primary/30">React Native</span>
+                            <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border-primary/30">LitFramework</span>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6 bg-gradient-secondary border-primary/20 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">Banco de Dados & Backend</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border-primary/30">SQL Server</span>
+                            <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border-primary/30">MySQL</span>
+                            <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border-primary/30">Entity Framework</span>
+                            <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border-primary/30">Solr</span>
+                            <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border-primary/30">Firebase</span>
+                            <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border-primary/30">MongoDB</span>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6 bg-gradient-secondary border-primary/20 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">Ferramentas & Metodologias</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border-primary/30">Git</span>
+                            <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border-primary/30">Jira</span>
+                            <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border-primary/30">UML</span>
+                            <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border-primary/30">BPMN</span>
+                            <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border-primary/30">DevOps</span>
+                            <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border-primary/30">Metodologias Ágeis</span>
+                            <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border-primary/30">Docker</span>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6 bg-gradient-secondary border-primary/20 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">Soft Skills</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border-primary/30">Liderança</span>
+                            <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border-primary/30">Trabalho em Equipe</span>
+                            <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border-primary/30">Comunicação</span>
+                            <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border-primary/30">Resolução de Problemas</span>
+                            <span class="px-3 py-1 rounded-full text-sm bg-primary/20 text-primary border-primary/30">Gestão de Projetos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Entre em Contato</h2>
+            <div class="max-w-2xl mx-auto">
+                <div class="p-8 bg-gradient-secondary border-primary/20 text-center rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-6">Vamos Conversar!</h3>
+                    <p class="text-muted-foreground mb-8">
+                        Estou sempre aberto a novas oportunidades e projetos interessantes.
+                        Entre em contato comigo!
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-center gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-primary"></i>
+                            <a 
+                                href="mailto:guilhermesantospineda@gmail.com" 
+                                class="text-lg hover:text-primary transition-colors"
+                            >
+                                guilhermesantospineda@gmail.com
+                            </a>
+                        </div>
+                        <div class="flex items-center justify-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-primary"></i>
+                            <a 
+                                href="tel:+5511971225580" 
+                                class="text-lg hover:text-primary transition-colors"
+                            >
+                                (11) 97122-5580
+                            </a>
+                        </div>
+                        <div class="flex items-center justify-center gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-primary"></i>
+                            <span class="text-lg">Osasco, São Paulo, Brasil</span>
+                        </div>
+                    </div>
+                    <div class="mt-8 flex justify-center gap-4">
+                        <button class="bg-gradient-primary hover:shadow-glow transition-all duration-300 px-6 py-3 rounded-md text-white font-medium flex items-center">
+                            <i data-lucide="mail" class="w-4 h-4 mr-2"></i>
+                            Enviar Email
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-border">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-muted-foreground">
+                © 2024 Guilherme dos Santos Pineda. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Track active section
+        let activeSection = "hero";
+
+        // Handle scroll to update active section
+        window.addEventListener('scroll', function() {
+            const sections = ["hero", "about", "education", "experience", "skills", "contact"];
+            const scrollPosition = window.scrollY + 100;
+
+            for (const section of sections) {
+                const element = document.getElementById(section);
+                if (element && element.offsetTop <= scrollPosition && 
+                    element.offsetTop + element.offsetHeight > scrollPosition) {
+                    
+                    // Update active section
+                    activeSection = section;
+                    
+                    // Update navigation buttons
+                    document.querySelectorAll('nav button').forEach(button => {
+                        if (button.textContent.toLowerCase() === section) {
+                            button.classList.remove('text-muted-foreground');
+                            button.classList.add('text-primary');
+                        } else {
+                            button.classList.remove('text-primary');
+                            button.classList.add('text-muted-foreground');
+                        }
+                    });
+                    
+                    break;
+                }
+            }
+        });
+
+        // Smooth scroll to section
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
