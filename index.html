@@ -149,6 +149,9 @@
                     <button onclick="scrollToSection('experience')" class="text-sm font-medium transition-colors hover:text-primary text-muted-foreground">
                         Experience
                     </button>
+                    <button onclick="scrollToSection('projects')" class="text-sm font-medium transition-colors hover:text-primary text-muted-foreground">
+                        Projects
+                    </button>
                     <button onclick="scrollToSection('skills')" class="text-sm font-medium transition-colors hover:text-primary text-muted-foreground">
                         Skills
                     </button>
@@ -436,6 +439,231 @@
         </div>
     </section>
 
+    <section id="projects" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Projetos</h2>
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Projeto 1: Sistema de Leilões -->
+                    <div class="project-card p-6 bg-gradient-secondary border-primary/20 hover:shadow-glow transition-all duration-300 rounded-lg">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-primary/20 p-2 rounded-lg">
+                                <i data-lucide="gavel" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">Gerador de Curriculo</h3>
+                        </div>
+                        <p class="text-muted-foreground mb-4">
+                            Sistema completo para criação rapida de Curriculos gerando renda passiva com anuncios, 
+                            integração com JavaScript e interface moderna desenvolvida com Tailwind.
+                        </p>
+                        <div class="mb-4">
+                            <h4 class="text-sm font-semibold text-primary mb-2">Principais Features:</h4>
+                            <ul class="text-sm text-muted-foreground space-y-1">
+                                <li>• Gerador Rapido</li>
+                                <li>• Futuramente será implementado I.A</li>
+                                <li>• Facil e simples de usar</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 rounded text-xs bg-secondary text-foreground">JavaScript</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 bg-primary/20 hover:bg-primary/30 px-4 py-2 rounded-md text-primary text-sm font-medium transition-colors">
+                               <a href="https://cv-express-alpha.vercel.app/">Ver Detalhes</a> 
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 2: App Mobile de Delivery -->
+                    <!-- <div class="project-card p-6 bg-gradient-secondary border-primary/20 hover:shadow-glow transition-all duration-300 rounded-lg">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-primary/20 p-2 rounded-lg">
+                                <i data-lucide="smartphone" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">App de Delivery</h3>
+                        </div>
+                        <p class="text-muted-foreground mb-4">
+                            Aplicativo móvel multiplataforma para delivery de alimentos com sistema de pedidos em tempo real, 
+                            rastreamento GPS e integração com gateway de pagamentos.
+                        </p>
+                        <div class="mb-4">
+                            <h4 class="text-sm font-semibold text-primary mb-2">Principais Features:</h4>
+                            <ul class="text-sm text-muted-foreground space-y-1">
+                                <li>• Geolocalização e mapas</li>
+                                <li>• Chat em tempo real</li>
+                                <li>• Sistema de avaliações</li>
+                                <li>• Notificações push</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 rounded text-xs bg-secondary text-foreground">Flutter</span>
+                            <span class="px-2 py-1 rounded text-xs bg-secondary text-foreground">Firebase</span>
+                            <span class="px-2 py-1 rounded text-xs bg-secondary text-foreground">Node.js</span>
+                            <span class="px-2 py-1 rounded text-xs bg-secondary text-foreground">MongoDB</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 bg-primary/20 hover:bg-primary/30 px-4 py-2 rounded-md text-primary text-sm font-medium transition-colors">
+                                Ver Detalhes
+                            </button>
+                        </div>
+                    </div> -->
+
+                    <!-- Projeto 3: Dashboard Analytics -->
+                    <!-- <div class="project-card p-6 bg-gradient-secondary border-primary/20 hover:shadow-glow transition-all duration-300 rounded-lg">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-primary/20 p-2 rounded-lg">
+                                <i data-lucide="bar-chart-3" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">Dashboard Analytics</h3>
+                        </div>
+                        <p class="text-muted-foreground mb-4">
+                            Plataforma de business intelligence com visualizações interativas, relatórios automatizados 
+                            e integração com múltiplas fontes de dados.
+                        </p>
+                        <div class="mb-4">
+                            <h4 class="text-sm font-semibold text-primary mb-2">Principais Features:</h4>
+                            <ul class="text-sm text-muted-foreground space-y-1">
+                                <li>• Gráficos interativos</li>
+                                <li>• Filtros dinâmicos</li>
+                                <li>• Exportação automática</li>
+                                <li>• Alertas personalizados</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 rounded text-xs bg-secondary text-foreground">React</span>
+                            <span class="px-2 py-1 rounded text-xs bg-secondary text-foreground">TypeScript</span>
+                            <span class="px-2 py-1 rounded text-xs bg-secondary text-foreground">D3.js</span>
+                            <span class="px-2 py-1 rounded text-xs bg-secondary text-foreground">PostgreSQL</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 bg-primary/20 hover:bg-primary/30 px-4 py-2 rounded-md text-primary text-sm font-medium transition-colors">
+                                Ver Detalhes
+                            </button>
+                        </div>
+                    </div> -->
+
+                    <!-- Projeto 4: API REST Enterprise -->
+                    <!-- <div class="project-card p-6 bg-gradient-secondary border-primary/20 hover:shadow-glow transition-all duration-300 rounded-lg">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-primary/20 p-2 rounded-lg">
+                                <i data-lucide="server" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">API REST Enterprise</h3>
+                        </div>
+                        <p class="text-muted-foreground mb-4">
+                            API robusta e escalável para sistema empresarial com autenticação JWT, 
+                            documentação Swagger e arquitetura baseada em microsserviços.
+                        </p>
+                        <div class="mb-4">
+                            <h4 class="text-sm font-semibold text-primary mb-2">Principais Features:</h4>
+                            <ul class="text-sm text-muted-foreground space-y-1">
+                                <li>• Autenticação e autorização</li>
+                                <li>• Rate limiting</li>
+                                <li>• Monitoramento e logs</li>
+                                <li>• Versionamento de API</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 rounded text-xs bg-secondary text-foreground">.NET Core</span>
+                            <span class="px-2 py-1 rounded text-xs bg-secondary text-foreground">Entity Framework</span>
+                            <span class="px-2 py-1 rounded text-xs bg-secondary text-foreground">Docker</span>
+                            <span class="px-2 py-1 rounded text-xs bg-secondary text-foreground">Redis</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 bg-primary/20 hover:bg-primary/30 px-4 py-2 rounded-md text-primary text-sm font-medium transition-colors">
+                                Ver Detalhes
+                            </button>
+                        </div>
+                    </div> -->
+
+                    <!-- Projeto 5: Sistema de Gestão -->
+                    <!-- <div class="project-card p-6 bg-gradient-secondary border-primary/20 hover:shadow-glow transition-all duration-300 rounded-lg">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-primary/20 p-2 rounded-lg">
+                                <i data-lucide="users" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">Sistema de Gestão</h3>
+                        </div>
+                        <p class="text-muted-foreground mb-4">
+                            Plataforma completa para gestão empresarial com módulos de CRM, financeiro, 
+                            estoque e recursos humanos integrados.
+                        </p>
+                        <div class="mb-4">
+                            <h4 class="text-sm font-semibold text-primary mb-2">Principais Features:</h4>
+                            <ul class="text-sm text-muted-foreground space-y-1">
+                                <li>• Gestão de clientes</li>
+                                <li>• Controle financeiro</li>
+                                <li>• Gestão de estoque</li>
+                                <li>• Relatórios gerenciais</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 rounded text-xs bg-secondary text-foreground">Angular</span>
+                            <span class="px-2 py-1 rounded text-xs bg-secondary text-foreground">C#</span>
+                            <span class="px-2 py-1 rounded text-xs bg-secondary text-foreground">MySQL</span>
+                            <span class="px-2 py-1 rounded text-xs bg-secondary text-foreground">Azure</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 bg-primary/20 hover:bg-primary/30 px-4 py-2 rounded-md text-primary text-sm font-medium transition-colors">
+                                Ver Detalhes
+                            </button>
+                        </div>
+                    </div> -->
+
+                    <!-- Projeto 6: E-commerce Platform -->
+                    <!-- <div class="project-card p-6 bg-gradient-secondary border-primary/20 hover:shadow-glow transition-all duration-300 rounded-lg">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-primary/20 p-2 rounded-lg">
+                                <i data-lucide="shopping-cart" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">E-commerce Platform</h3>
+                        </div>
+                        <p class="text-muted-foreground mb-4">
+                            Plataforma de e-commerce completa com carrinho de compras, sistema de pagamentos, 
+                            gestão de produtos e painel administrativo avançado.
+                        </p>
+                        <div class="mb-4">
+                            <h4 class="text-sm font-semibold text-primary mb-2">Principais Features:</h4>
+                            <ul class="text-sm text-muted-foreground space-y-1">
+                                <li>• Catálogo de produtos</li>
+                                <li>• Carrinho e checkout</li>
+                                <li>• Múltiplos métodos de pagamento</li>
+                                <li>• Gestão de pedidos</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 rounded text-xs bg-secondary text-foreground">React Native</span>
+                            <span class="px-2 py-1 rounded text-xs bg-secondary text-foreground">PHP</span>
+                            <span class="px-2 py-1 rounded text-xs bg-secondary text-foreground">Stripe</span>
+                            <span class="px-2 py-1 rounded text-xs bg-secondary text-foreground">MySQL</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 bg-primary/20 hover:bg-primary/30 px-4 py-2 rounded-md text-primary text-sm font-medium transition-colors">
+                                Ver Detalhes
+                            </button>
+                        </div>
+                    </div> -->
+                </div>
+
+                <!-- Call to Action -->
+                <div class="text-center mt-12">
+                    <p class="text-lg text-muted-foreground mb-6">
+                        Estes são alguns dos projetos que desenvolvi ao longo da minha carreira. 
+                        Cada um representa um desafio único e uma oportunidade de aprendizado.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button onclick="scrollToSection('contact')" class="bg-gradient-primary hover:shadow-glow transition-all duration-300 px-6 py-3 rounded-md text-white font-medium">
+                            Discutir um Projeto
+                        </button>
+                        <button class="px-6 py-3 rounded-md border border-border font-medium hover:bg-secondary/50 transition-colors">
+                            Ver Mais no GitHub
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
     <section id="skills" class="py-20 bg-secondary/20">
         <div class="container mx-auto px-6">
@@ -599,5 +827,3 @@
     </script>
 </body>
 </html>
-
-
